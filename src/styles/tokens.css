@@ -1,0 +1,21 @@
+:root {
+  /* Brand & Surfaces — swap these per startup project */
+  --color-bg: #ffffff;
+  --color-surface: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-accent: #111827;
+  --color-accent-contrast: #ffffff;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+
+  /* Spacing & Layout */
+  --container-max: 1120px;
+  --section-py: clamp(4rem, 8vw, 6.5rem);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-full: 9999px;
+}
