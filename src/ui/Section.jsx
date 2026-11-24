@@ -1,14 +1,23 @@
 import Container from './Container'
 
-export default function Section({ id, children, surface = false }) {
+export default function Section({
+  id,
+  children,
+  inverted = false,
+  reveal = true,
+  className = '',
+}) {
+  const classes = [
+    'section-block',
+    inverted ? 'section-inverted' : '',
+    reveal ? 'reveal' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
-    <section
-      id={id}
-      style={{
-        padding: 'var(--section-py) 0',
-        backgroundColor: surface ? 'var(--color-surface)' : 'var(--color-bg)',
-      }}
-    >
+    <section id={id} className={classes}>
       <Container>{children}</Container>
     </section>
   )
