@@ -1,13 +1,14 @@
-export default function Card({ children }) {
+export default function Card({
+  children,
+  variant = 'box',
+  className = '',
+  id,
+}) {
+  const baseClass = variant === 'flat' ? 'card-flat' : 'card-box'
+  const classes = `${baseClass} ${className}`.trim()
+
   return (
-    <div
-      style={{
-        padding: '1.75rem',
-        borderRadius: 'var(--radius-md)',
-        border: '1px solid var(--color-border)',
-        backgroundColor: 'var(--color-bg)',
-      }}
-    >
+    <div id={id} className={classes}>
       {children}
     </div>
   )
